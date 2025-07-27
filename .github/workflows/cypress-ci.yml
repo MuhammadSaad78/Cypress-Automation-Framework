@@ -3,20 +3,20 @@ name: Cypress Tests
 on:
   push:
     branches:
-      - master  # ya 'main' agar tumhari repo ka branch main ho
+      - master  # ya 'main' agar branch ka naam main hai
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18  # or 16, depends on your project
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
