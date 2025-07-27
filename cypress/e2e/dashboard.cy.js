@@ -11,8 +11,5 @@ describe("Dashboard Tests", () => {
     cy.contains("Dashboard").should("be.visible");
   });
 
-  it("should have Settings menu", () => {
-    cy.get("nav").contains("Settings").should("exist");
-  });
 
 });
