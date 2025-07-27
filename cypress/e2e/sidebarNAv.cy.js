@@ -5,6 +5,7 @@ import DashboardPage from "./Pages/Dashboard";
 const dashboardPage = new DashboardPage();
 
 describe("Sidebar Navigation Test", () => {
+    console.log('Trigger test')
 
   beforeEach(() => {
     cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");

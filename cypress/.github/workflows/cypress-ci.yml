@@ -1,27 +1,16 @@
 name: Cypress Tests
 
-on:
-  push:
-    branches:
-      - main   # ya 'main' agar tumhari branch ka naam 'main' hai
+on: [push]
 
 jobs:
-  cypress-run:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
 
       - name: Install dependencies
         run: npm install
 
       - name: Run Cypress tests
-        uses: cypress-io/github-action@v6
-        with:
-          browser: chrome
+        run: npx cypress run
