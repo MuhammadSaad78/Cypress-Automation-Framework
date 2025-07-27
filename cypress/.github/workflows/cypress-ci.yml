@@ -3,7 +3,7 @@ name: Cypress Tests
 on:
   push:
     branches:
-      - master   # ya 'main' agar tumhari branch ka naam 'main' hai
+      - main   # ya 'main' agar tumhari branch ka naam 'main' hai
 
 jobs:
   cypress-run:
